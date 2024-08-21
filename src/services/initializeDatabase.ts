@@ -1,9 +1,9 @@
 import pgp from 'pg-promise';
+import config from 'config';
 
-const connectionString =
-  'postgres://postgres:postgrespw@localhost:32768/NotesDB';
+const connectionString = config.get('postgres');
 
-const dbContext = pgp({})(connectionString);
+const dbContext = pgp({})(connectionString!);
 
 export const connectToDB = async () => {
   try {

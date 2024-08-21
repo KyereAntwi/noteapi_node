@@ -1,0 +1,3 @@
+{
+  "postgres": "postgres://postgres:postgrespw@localhost:32768/NotesDB"
+}
