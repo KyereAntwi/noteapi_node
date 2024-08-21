@@ -1,4 +1,4 @@
-import pgp from 'pg-promise';
+import pgp, { ParameterizedQuery } from 'pg-promise';
 import config from 'config';
 
 const connectionString = config.get('postgres');
@@ -13,5 +13,7 @@ export const connectToDB = async () => {
     console.error(error);
   }
 };
+
+export const PQ = ParameterizedQuery;
 
 export default dbContext;
